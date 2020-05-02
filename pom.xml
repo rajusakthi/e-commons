@@ -50,7 +50,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-			<finalName>e-commons.jar</finalName>
+			<finalName>e-commons</finalName>
 	</build>
 
 </project>
