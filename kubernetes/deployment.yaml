@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: e-commons
-        image: sakthibalan/e-commons:1.0
+        image: sakthibalan/e-commons:1.1
         ports:
         - containerPort: 8081
 apiVersion: v1
