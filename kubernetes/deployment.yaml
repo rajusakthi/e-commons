@@ -9,10 +9,6 @@ spec:
   selector:
     matchLabels:
       app: e-commons
-  template:
-    metadata:
-      labels:
-        app: e-commons
     spec:
       containers:
       - name: e-commons
@@ -23,13 +19,11 @@ apiVersion: v1
 kind: Service
 metadata:
   name: e-commons
-  labels:
-    app: e-commons
-    spring-boot: "true"
 spec:
   ports:
   - port: 8080
     protocol: TCP
+    nodePort: 30011
   selector:
     app: e-commons
   type: NodePort
