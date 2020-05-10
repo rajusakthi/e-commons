@@ -1,6 +1,4 @@
-FROM openjdk:8-jdk-alpine AS builder
-WORKDIR target/dependency
-ARG APPJAR=target/*.jar
-COPY ${APPJAR} app.jar
-RUN jar -xf ./app.jar
-ENTRYPOINT ["java","-cp","app:app/lib/*","com.eappz.platform.ecommons.ECommonsApplication"]
+FROM openjdk:8
+ADD target/e-commons.jar e-commons.jar
+EXPOSE 8081
+ENTRYPOINT ["java", "-jar","e-commons.jar"]
